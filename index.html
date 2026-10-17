@@ -46,6 +46,11 @@
         <span class="lantern" style="--x:91%; --len:70px; --d:.8s"></span>
       </div>
 
+      <div class="hero__layout">
+      <figure class="hero__photo">
+        <img src="media/photos/mariee-14.webp" alt="La mariée en tenue blanche et or, bras levés sous le lustre du hammam" width="600" height="900" fetchpriority="high">
+      </figure>
+
       <div class="gate">
         <svg class="gate__arch" viewBox="0 0 600 760" preserveAspectRatio="none" aria-hidden="true">
           <defs>
@@ -76,6 +81,7 @@
           </div>
         </div>
       </div>
+      </div>
 
       <div class="tile-band" aria-hidden="true"></div>
     </section>
@@ -96,6 +102,10 @@
           lustres en cristal. Vous n'avez qu'à venir&nbsp;; nous préparons le reste.
         </p>
       </div>
+
+      <figure class="concept__photo">
+        <img src="media/photos/mariee-05.jpg" alt="La mariée entourée de ses amies en tenue traditionnelle, éventail à la main" loading="lazy" width="600" height="800">
+      </figure>
 
       <ul class="pillars">
         <li>
@@ -197,6 +207,7 @@
           </ul>
           <p class="pack__price"><span data-price>1000</span> DT</p>
           <a class="btn btn--gold pack__book" data-book href="https://wa.me/21653335379" target="_blank" rel="noopener">Réserver ce pack</a>
+          <button class="pack__poster" type="button" data-poster>Voir l'affiche du pack</button>
         </article>
 
         <article class="pack" data-tier="royal">
@@ -210,6 +221,7 @@
           </ul>
           <p class="pack__price"><span data-price>1500</span> DT</p>
           <a class="btn btn--gold pack__book" data-book href="https://wa.me/21653335379" target="_blank" rel="noopener">Réserver ce pack</a>
+          <button class="pack__poster" type="button" data-poster>Voir l'affiche du pack</button>
         </article>
 
         <article class="pack" data-tier="gold">
@@ -223,6 +235,7 @@
           </ul>
           <p class="pack__price"><span data-price>1800</span> DT</p>
           <a class="btn btn--gold pack__book" data-book href="https://wa.me/21653335379" target="_blank" rel="noopener">Réserver ce pack</a>
+          <button class="pack__poster" type="button" data-poster>Voir l'affiche du pack</button>
         </article>
 
         <article class="pack" data-tier="diamond">
@@ -237,25 +250,57 @@
           </ul>
           <p class="pack__price"><span data-price>2500</span> DT</p>
           <a class="btn btn--gold pack__book" data-book href="https://wa.me/21653335379" target="_blank" rel="noopener">Réserver ce pack</a>
+          <button class="pack__poster" type="button" data-poster>Voir l'affiche du pack</button>
         </article>
       </div>
 
       <p class="offers__alt">Vous préférez Instagram&nbsp;? <a href="https://www.instagram.com/tache_speciale" target="_blank" rel="noopener">Écrivez-nous en message privé</a> en indiquant le numéro du pack.</p>
     </section>
 
-    <!-- GALERIE : remplacer chaque .photo--empty par <img src="images/...jpg" alt="..."> -->
+    <!-- GALERIE : ajouter une photo = copier un bloc <button class="shot"> et changer les deux chemins -->
     <section id="galerie" class="gallery">
       <div class="gallery__head">
-        <h2>Dans nos murs</h2>
+        <h2>Hammam 3rousa en images</h2>
         <p>Retrouvez toutes nos journées sur <a href="https://www.instagram.com/tache_speciale" target="_blank" rel="noopener">Instagram</a>.</p>
       </div>
 
       <div class="gallery__grid">
-        <figure class="photo photo--tall photo--empty"><figcaption>La mariée en keswa</figcaption></figure>
-        <figure class="photo photo--empty"><figcaption>Le salon du harem</figcaption></figure>
-        <figure class="photo photo--empty"><figcaption>La salle de vapeur</figcaption></figure>
-        <figure class="photo photo--wide photo--empty"><figcaption>Le cortège et le buffet</figcaption></figure>
-        <figure class="photo photo--tall photo--empty"><figcaption>Détails et lanternes</figcaption></figure>
+        <button class="shot" type="button" data-full="media/photos/mariee-08.webp" aria-label="Agrandir : La mariée touche le lustre en cristal">
+          <img src="media/photos/mariee-08.webp" alt="La mariée touche le lustre en cristal" loading="lazy">
+        </button>
+        <button class="shot" type="button" data-full="media/photos/mariee-02.jpg" aria-label="Agrandir : La mariée devant un panneau de plâtre sculpté en arche">
+          <img src="media/photos/mariee-02.jpg" alt="La mariée devant un panneau de plâtre sculpté en arche" loading="lazy">
+        </button>
+        <button class="shot" type="button" data-full="media/photos/mariee-04.jpg" aria-label="Agrandir : Bijoux, perles et broderies dorées">
+          <img src="media/photos/mariee-04.jpg" alt="Bijoux, perles et broderies dorées" loading="lazy">
+        </button>
+        <button class="shot" type="button" data-full="media/photos/mariee-06.jpg" aria-label="Agrandir : Danse et youyous autour de la mariée">
+          <img src="media/photos/mariee-06.jpg" alt="Danse et youyous autour de la mariée" loading="lazy">
+        </button>
+        <button class="shot" type="button" data-full="media/photos/mariee-10.webp" aria-label="Agrandir : La mariée sur une banquette de velours rouge">
+          <img src="media/photos/mariee-10.webp" alt="La mariée sur une banquette de velours rouge" loading="lazy">
+        </button>
+        <button class="shot" type="button" data-full="media/photos/mariee-07.jpg" aria-label="Agrandir : Tenue brodée d'or devant le miroir doré">
+          <img src="media/photos/mariee-07.jpg" alt="Tenue brodée d'or devant le miroir doré" loading="lazy">
+        </button>
+        <button class="shot" type="button" data-full="media/photos/mariee-01.jpg" aria-label="Agrandir : La mariée en cape devant une porte sculptée">
+          <img src="media/photos/mariee-01.jpg" alt="La mariée en cape devant une porte sculptée" loading="lazy">
+        </button>
+        <button class="shot" type="button" data-full="media/photos/mariee-13.webp" aria-label="Agrandir : Sourire sous le lustre">
+          <img src="media/photos/mariee-13.webp" alt="Sourire sous le lustre" loading="lazy">
+        </button>
+        <button class="shot" type="button" data-full="media/photos/mariee-03.jpg" aria-label="Agrandir : La mariée assise dans le salon ivoire">
+          <img src="media/photos/mariee-03.jpg" alt="La mariée assise dans le salon ivoire" loading="lazy">
+        </button>
+        <button class="shot" type="button" data-full="media/photos/mariee-11.webp" aria-label="Agrandir : La mariée voilée, théière en laiton à ses pieds">
+          <img src="media/photos/mariee-11.webp" alt="La mariée voilée, théière en laiton à ses pieds" loading="lazy">
+        </button>
+        <button class="shot" type="button" data-full="media/photos/mariee-12.webp" aria-label="Agrandir : Devant le grand miroir baroque">
+          <img src="media/photos/mariee-12.webp" alt="Devant le grand miroir baroque" loading="lazy">
+        </button>
+        <button class="shot" type="button" data-full="media/photos/mariee-09.webp" aria-label="Agrandir : Pause sur la banquette sous l'arche">
+          <img src="media/photos/mariee-09.webp" alt="Pause sur la banquette sous l'arche" loading="lazy">
+        </button>
       </div>
     </section>
 
@@ -354,6 +399,11 @@
       </g>
     </symbol>
   </svg>
+
+  <dialog class="lightbox" aria-label="Photo agrandie">
+    <img alt="">
+    <button class="lightbox__close" type="button">Fermer</button>
+  </dialog>
 
   <script src="script.js"></script>
 </body>

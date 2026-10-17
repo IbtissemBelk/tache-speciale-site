@@ -54,6 +54,8 @@
       var d = card.querySelector('[data-duration]');
       if (d) d.textContent = p[2];
       card.querySelector('[data-size]').textContent = size;
+      card.querySelector('[data-poster]').setAttribute('data-full',
+        'media/packs/pack-' + (p[0] < 10 ? '0' : '') + p[0] + '.jpg');
       var msg = 'Bonjour, je souhaite réserver le Pack ' + p[0] + ' (' + NAMES[tier] + ', ' +
         size + ' personnes, ' + p[1] + ' DT) pour mon hammam de mariée.';
       card.querySelector('[data-book]').href = 'https://wa.me/21653335379?text=' + encodeURIComponent(msg);
@@ -65,4 +67,21 @@
   });
   var checked = document.querySelector('input[name="group"]:checked');
   render(checked ? checked.value : 10);
+})();
+
+// Visionneuse : photos de la galerie et affiches des packs.
+(function () {
+  var box = document.querySelector('.lightbox');
+  if (!box || !box.showModal) return;
+  var img = box.querySelector('img');
+  document.addEventListener('click', function (e) {
+    var trigger = e.target.closest('[data-full]');
+    if (!trigger) return;
+    var inner = trigger.querySelector('img');
+    img.src = trigger.getAttribute('data-full');
+    img.alt = inner ? inner.alt : trigger.textContent.trim();
+    box.showModal();
+  });
+  box.querySelector('.lightbox__close').addEventListener('click', function () { box.close(); });
+  box.addEventListener('click', function (e) { if (e.target === box) box.close(); });
 })();
