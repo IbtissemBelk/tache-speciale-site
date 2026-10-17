@@ -34,3 +34,34 @@
     if (e.key === 'Escape') setMenu(false);
   });
 })();
+
+// Packs mariée : prix (DT), numéro de pack et durée de privatisation selon la taille du groupe.
+(function () {
+  var PACKS = {
+    10: { simple: [1, 1000, '2h'],   royal: [2, 1500, '3h'],  gold: [3, 1800, '3h'],  diamond: [4, 2500, '3h'] },
+    15: { simple: [5, 1400, '2h30'], royal: [6, 1900, '3h'],  gold: [7, 2200, '3h'],  diamond: [8, 2800, '3h'] },
+    25: { simple: [9, 1800, '2h30'], royal: [10, 2300, '3h'], gold: [11, 2500, '3h'], diamond: [12, 3400, '3h'] }
+  };
+  var NAMES = { simple: 'Simple', royal: 'Royal', gold: 'Gold', diamond: 'Diamond' };
+  var cards = document.querySelectorAll('.offer[data-tier]');
+
+  function render(size) {
+    cards.forEach(function (card) {
+      var tier = card.getAttribute('data-tier');
+      var p = PACKS[size][tier];
+      card.querySelector('[data-pack]').textContent = p[0];
+      card.querySelector('[data-price]').textContent = p[1].toLocaleString('fr-FR');
+      var d = card.querySelector('[data-duration]');
+      if (d) d.textContent = p[2];
+      var msg = 'Bonjour, je souhaite réserver le Pack ' + p[0] + ' (' + NAMES[tier] + ', ' +
+        size + ' personnes, ' + p[1] + ' DT) pour mon hammam de mariée.';
+      card.querySelector('[data-book]').href = 'https://wa.me/21653335379?text=' + encodeURIComponent(msg);
+    });
+  }
+
+  document.querySelectorAll('input[name="group"]').forEach(function (input) {
+    input.addEventListener('change', function () { render(input.value); });
+  });
+  var checked = document.querySelector('input[name="group"]:checked');
+  render(checked ? checked.value : 10);
+})();
