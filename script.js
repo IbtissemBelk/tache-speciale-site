@@ -43,7 +43,7 @@
     25: { simple: [9, 1800, '2h30'], royal: [10, 2300, '3h'], gold: [11, 2500, '3h'], diamond: [12, 3400, '3h'] }
   };
   var NAMES = { simple: 'Simple', royal: 'Royal', gold: 'Gold', diamond: 'Diamond' };
-  var cards = document.querySelectorAll('.offer[data-tier]');
+  var cards = document.querySelectorAll('.pack[data-tier]');
 
   function render(size) {
     cards.forEach(function (card) {
@@ -53,6 +53,7 @@
       card.querySelector('[data-price]').textContent = p[1].toLocaleString('fr-FR');
       var d = card.querySelector('[data-duration]');
       if (d) d.textContent = p[2];
+      card.querySelector('[data-size]').textContent = size;
       var msg = 'Bonjour, je souhaite réserver le Pack ' + p[0] + ' (' + NAMES[tier] + ', ' +
         size + ' personnes, ' + p[1] + ' DT) pour mon hammam de mariée.';
       card.querySelector('[data-book]').href = 'https://wa.me/21653335379?text=' + encodeURIComponent(msg);

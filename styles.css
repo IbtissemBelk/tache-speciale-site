@@ -543,6 +543,112 @@ main > section:not(.hero) > * {
   border-radius: 999px;
 }
 
+/* ---------- Cartes de pack, dans l'esprit des stories Instagram ---------- */
+.pack {
+  --rose: #B3122E;
+  --blush: #F7D7DC;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 470px;
+  padding: 1.6rem 1.3rem 1.4rem;
+  border: 2px solid var(--gold);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(38,23,13,.55) 0%, rgba(38,23,13,.72) 100%),
+    var(--tile),
+    var(--walnut);
+  background-size: auto, 40px 40px, auto;
+  color: var(--ink);
+}
+/* coupole octogonale du plafond sculpté */
+.pack::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  width: 210px;
+  height: 210px;
+  transform: translateX(-50%);
+  background:
+    repeating-conic-gradient(from 22.5deg, rgba(228,196,126,.55) 0 1.5deg, transparent 1.5deg 22.5deg),
+    radial-gradient(circle, #8A5A2E 0 28%, var(--walnut-deep) 72%);
+  clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+}
+/* lustre en laiton */
+.pack::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 34px;
+  height: 46px;
+  transform: translateX(-50%);
+  background:
+    linear-gradient(var(--gold-light), var(--gold-light)) 50% 0 / 2px 14px no-repeat,
+    radial-gradient(ellipse at 50% 70%, #FFF3CF 0 18%, var(--gold-light) 30%, var(--gold) 55%, transparent 58%);
+}
+.pack > * { position: relative; z-index: 1; }
+.pack__rose {
+  position: absolute;
+  z-index: 2;
+  width: 92px;
+  height: 92px;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 6px rgba(38,23,13,.45));
+}
+.pack__rose--top { top: -16px; right: -18px; transform: rotate(-20deg); }
+.pack__rose--bottom { bottom: 64px; left: -26px; transform: rotate(160deg); }
+.pack__title {
+  align-self: center;
+  margin: 4.4rem 0 .5rem;
+  padding: .15rem 1.4rem .3rem;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--rose);
+  background: var(--blush);
+  border-radius: 999px;
+}
+.pack__name {
+  align-self: center;
+  margin: 0 0 1.3rem;
+  padding: .2rem .9rem;
+  font-size: .9rem;
+  font-weight: 600;
+  color: #8E0F25;
+  background: var(--blush);
+  border-radius: 999px;
+  text-align: center;
+}
+.pack__list {
+  list-style: none;
+  margin: 0 0 1.2rem;
+  padding: 0;
+}
+.pack__list li {
+  margin-bottom: .45rem;
+  padding: .55rem .9rem;
+  font-size: .95rem;
+  font-weight: 500;
+  background: rgba(247,241,230,.88);
+  border-radius: 12px;
+}
+.pack__price {
+  align-self: flex-end;
+  margin: auto 0 1rem;
+  padding: .45rem 1rem .55rem;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--rose);
+  background: var(--blush);
+  border-radius: 16px;
+}
+.pack__book { width: 100%; z-index: 3; }
+.pack[data-tier="diamond"] { box-shadow: 0 0 0 4px var(--ivory), 0 0 0 5px var(--gold); }
+
 /* ---------- Galerie ---------- */
 .gallery {
   background: var(--walnut-deep);
