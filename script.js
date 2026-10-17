@@ -73,7 +73,8 @@
 (function () {
   var box = document.querySelector('.lightbox');
   if (!box || !box.showModal) return;
-  var img = box.querySelector('img');
+  var img = document.createElement('img');
+  box.insertBefore(img, box.firstChild);
   document.addEventListener('click', function (e) {
     var trigger = e.target.closest('[data-full]');
     if (!trigger) return;
