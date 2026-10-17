@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tache Spéciale · Hammam de la mariée</title>
+  <meta name="description" content="Tache Spéciale, le hammam de la mariée en Tunisie : une journée entre amies et en famille, en tenue traditionnelle, avec musique et brunch, dans un décor de palais ottoman.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cormorant+Upright:wght@400;500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Rideaux de velours : s'ouvrent une seule fois au chargement -->
+  <div class="curtains" aria-hidden="true">
+    <div class="curtain curtain--left"></div>
+    <div class="curtain curtain--right"></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#accueil" aria-label="Tache Spéciale, retour en haut">
+      <span class="brand__seal" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><use href="#star8"/></svg>
+      </span>
+      <span class="brand__name">Tache Spéciale</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" class="nav">
+      <a href="#concept">Le concept</a>
+      <a href="#journee">La journée</a>
+      <a href="#formules">Formules</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#contact" class="nav__cta">Réserver</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO : la porte du palais -->
+    <section id="accueil" class="hero">
+      <div class="hero__sky" aria-hidden="true"></div>
+      <div class="ceiling" aria-hidden="true"></div>
+      <div class="lanterns" aria-hidden="true">
+        <span class="lantern" style="--x:9%; --len:70px; --d:0s"></span>
+        <span class="lantern" style="--x:91%; --len:70px; --d:.8s"></span>
+      </div>
+
+      <div class="gate">
+        <svg class="gate__arch" viewBox="0 0 600 760" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="goldline" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stop-color="#E9C97A"/>
+              <stop offset="1" stop-color="#A9782C"/>
+            </linearGradient>
+          </defs>
+          <!-- arc ogival (en accolade) -->
+          <path d="M20 760 V300 C20 170 200 120 300 20 C400 120 580 170 580 300 V760Z" fill="#F7F1E6" fill-opacity=".9"/>
+          <path d="M20 760 V300 C20 170 200 120 300 20 C400 120 580 170 580 300 V760"
+                fill="none" stroke="url(#goldline)" stroke-width="3"/>
+          <path d="M44 760 V306 C44 192 214 146 300 56 C386 146 556 192 556 306 V760"
+                fill="none" stroke="url(#goldline)" stroke-width="1.2" opacity=".7"/>
+        </svg>
+
+        <div class="gate__inner">
+          <p class="hero__arabic" lang="ar" dir="rtl">حمّام العروسة</p>
+          <h1 class="hero__title">Le hammam de la mariée, comme au palais</h1>
+          <p class="hero__lead">
+            Une journée entière pour la future mariée, ses amies et sa famille&nbsp;:
+            en tenue traditionnelle, entre vapeur, henné, chants et brunch, sous les lustres
+            et les plafonds sculptés de notre palais.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--gold" href="#contact">Réserver votre journée</a>
+            <a class="btn btn--ghost-dark" href="#journee">Découvrir le déroulé</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="tile-band" aria-hidden="true"></div>
+    </section>
+
+    <!-- CONCEPT -->
+    <section id="concept" class="concept">
+      <div class="concept__text">
+        <h2>Pas un simple spa. Une fête.</h2>
+        <p>
+          En Tunisie, le hammam de la mariée est un rituel que l'on vit ensemble.
+          Chez Tache Spéciale, la future mariée arrive entourée de ses proches,
+          chacune dans sa plus belle tenue traditionnelle, et le hammam devient
+          une salle de fête.
+        </p>
+        <p>
+          Le lieu est pensé comme le harem d'un palais ottoman&nbsp;: murs ivoire
+          creusés de niches en arche, boiseries dorées sculptées au plafond et
+          lustres en cristal. Vous n'avez qu'à venir&nbsp;; nous préparons le reste.
+        </p>
+      </div>
+
+      <ul class="pillars">
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#ico-steam"/></svg>
+          <h3>Le hammam</h3>
+          <p>Vapeur, gommage au kassa, savon noir et masque au ghassoul pour la mariée et ses invitées.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#ico-crown"/></svg>
+          <h3>La beauté</h3>
+          <p>Soins esthétiques et coiffure pour que la mariée sorte du hammam rayonnante.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#ico-henna"/></svg>
+          <h3>Henné et harkous</h3>
+          <p>Le henné et les motifs au harkous, gestes de la tradition tunisienne avant le grand jour.</p>
+        </li>
+        <li>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><use href="#ico-drum"/></svg>
+          <h3>La fête</h3>
+          <p>Tenues traditionnelles, darbouka, youyous et brunch partagé autour de la mariée.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- DEROULE (vraie séquence : numérotation justifiée) -->
+    <section id="journee" class="journey">
+      <div class="journey__head">
+        <h2>Le déroulé de la journée</h2>
+        <p>Chaque journée s'adapte à votre groupe. Voici comment elle se passe le plus souvent.</p>
+      </div>
+
+      <ol class="timeline">
+        <li>
+          <span class="timeline__num">I</span>
+          <div>
+            <h3>L'accueil au palais</h3>
+            <p>La mariée et son cortège sont reçus avec thé à la menthe et eau de fleur d'oranger. On s'installe dans le salon, en tenue traditionnelle.</p>
+          </div>
+        </li>
+        <li>
+          <span class="timeline__num">II</span>
+          <div>
+            <h3>Le rituel du hammam</h3>
+            <p>Vapeur, gommage, savon noir et ghassoul, puis soins, coiffure, henné et harkous pour la mariée, ses proches à ses côtés.</p>
+          </div>
+        </li>
+        <li>
+          <span class="timeline__num">III</span>
+          <div>
+            <h3>Musique et célébration</h3>
+            <p>Les percussions démarrent, les youyous suivent. Danses, chants et photos dans le décor du harem.</p>
+          </div>
+        </li>
+        <li>
+          <span class="timeline__num">IV</span>
+          <div>
+            <h3>Le brunch de la mariée</h3>
+            <p>Une table généreuse à partager pour clôturer la journée, avant le grand jour.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- FORMULES -->
+    <section id="formules" class="offers">
+      <div class="offers__head">
+        <h2>Nos formules</h2>
+        <p>Les tarifs dépendent de la taille du groupe et des options. Écrivez-nous pour recevoir un devis.</p>
+      </div>
+
+      <div class="offers__grid">
+        <article class="offer">
+          <h3>Hammam entre proches</h3>
+          <p class="offer__for">Pour un petit cercle autour de la mariée</p>
+          <ul>
+            <li>Accès privatisé au hammam</li>
+            <li>Rituel complet pour la mariée</li>
+            <li>Thé et douceurs à l'accueil</li>
+          </ul>
+          <!-- PRIX À COMPLÉTER par la propriétaire -->
+          <p class="offer__price" data-placeholder>Prix sur demande</p>
+        </article>
+
+        <article class="offer offer--royal">
+          <p class="offer__badge">La plus demandée</p>
+          <h3>Journée Harim Soltan</h3>
+          <p class="offer__for">La célébration complète, comme au palais</p>
+          <ul>
+            <li>Hammam privatisé pour tout le groupe</li>
+            <li>Rituel complet pour la mariée et ses invitées</li>
+            <li>Animation musicale traditionnelle</li>
+            <li>Brunch de la mariée</li>
+          </ul>
+          <!-- PRIX À COMPLÉTER par la propriétaire -->
+          <p class="offer__price" data-placeholder>Prix sur demande</p>
+        </article>
+
+        <article class="offer">
+          <h3>Sur mesure</h3>
+          <p class="offer__for">Vous avez une idée précise&nbsp;?</p>
+          <ul>
+            <li>Nombre d'invitées libre</li>
+            <li>Options à la carte</li>
+            <li>Décoration et thème personnalisés</li>
+          </ul>
+          <!-- PRIX À COMPLÉTER par la propriétaire -->
+          <p class="offer__price" data-placeholder>Devis personnalisé</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GALERIE : remplacer chaque .photo--empty par <img src="images/...jpg" alt="..."> -->
+    <section id="galerie" class="gallery">
+      <div class="gallery__head">
+        <h2>Dans nos murs</h2>
+        <p>Retrouvez toutes nos journées sur <a href="https://www.instagram.com/tache_speciale" target="_blank" rel="noopener">Instagram</a>.</p>
+      </div>
+
+      <div class="gallery__grid">
+        <figure class="photo photo--tall photo--empty"><figcaption>La mariée en keswa</figcaption></figure>
+        <figure class="photo photo--empty"><figcaption>Le salon du harem</figcaption></figure>
+        <figure class="photo photo--empty"><figcaption>La salle de vapeur</figcaption></figure>
+        <figure class="photo photo--wide photo--empty"><figcaption>Le cortège et le brunch</figcaption></figure>
+        <figure class="photo photo--tall photo--empty"><figcaption>Détails et lanternes</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="contact__card">
+        <h2>Réservez la journée de la mariée</h2>
+        <p>Dites-nous la date, le nombre d'invitées et la formule qui vous plaît. Nous vous répondons avec les disponibilités et un devis.</p>
+
+        <div class="contact__actions">
+          <!-- WhatsApp : numéro de la bio Instagram (53 335 379), à confirmer qu'il est bien sur WhatsApp. -->
+          <a class="btn btn--gold" href="https://wa.me/21653335379?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20hammam%20de%20mari%C3%A9e" target="_blank" rel="noopener">
+            Écrire sur WhatsApp
+          </a>
+          <a class="btn btn--ghost-dark" href="tel:+21653335379">Appeler le 53 335 379</a>
+          <a class="btn btn--ghost-dark" href="https://www.instagram.com/tache_speciale" target="_blank" rel="noopener">
+            Écrire sur Instagram
+          </a>
+        </div>
+
+        <dl class="contact__info">
+          <div>
+            <dt>Adresse</dt>
+            <dd><a href="https://maps.app.goo.gl/ophGVKEyRbmCkDMU9" target="_blank" rel="noopener">Voir l'itinéraire sur Google Maps</a></dd>
+          </div>
+          <div>
+            <dt>Téléphone</dt>
+            <dd><a href="tel:+21653335379">53 335 379</a></dd>
+          </div>
+          <div>
+            <dt>Horaires</dt>
+            <dd>Du mardi au dimanche<br>10h à 18h30</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="tile-band tile-band--thin" aria-hidden="true"></div>
+    <p class="footer__arabic" lang="ar" dir="rtl">تاش سبيسيال</p>
+    <p>Tache Spéciale, hammam de la mariée · Tunisie</p>
+    <p><a href="https://www.instagram.com/tache_speciale" target="_blank" rel="noopener">@tache_speciale</a></p>
+  </footer>
+
+  <!-- Symboles SVG réutilisés -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="star8" viewBox="0 0 40 40">
+      <path d="M20 2 25 9 34 6 31 15 38 20 31 25 34 34 25 31 20 38 15 31 6 34 9 25 2 20 9 15 6 6 15 9Z" fill="currentColor"/>
+      <circle cx="20" cy="20" r="5" fill="var(--crimson-deep)"/>
+    </symbol>
+    <symbol id="ico-steam" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M16 30c-4-5 4-8 0-14"/><path d="M24 30c-4-5 4-8 0-14"/><path d="M32 30c-4-5 4-8 0-14"/>
+        <path d="M8 36h32M12 41h24"/>
+      </g>
+    </symbol>
+    <symbol id="ico-drum" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+        <ellipse cx="24" cy="11" rx="12" ry="4"/>
+        <path d="M12 11c0 8 8 10 8 18v10h8V29c0-8 8-10 8-18"/>
+        <path d="M18 18l12 0M20 39h8"/>
+      </g>
+    </symbol>
+    <symbol id="ico-tea" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M24 6v4M20 10h8l2 6H18Z"/>
+        <path d="M14 16h20c0 12-4 18-10 18S14 28 14 16Z"/>
+        <path d="M34 20c6-2 8 6 0 8M14 22c-6 0-6 6-2 8"/>
+        <path d="M12 40h24"/>
+      </g>
+    </symbol>
+    <symbol id="ico-henna" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 42V22c0-2 3-2 3 0v-12c0-2 3-2 3 0v10-12c0-2 3-2 3 0v12-9c0-2 3-2 3 0v13l3-4c1.5-2 4-.5 3 1.5L29 36c-1.5 3-3 6-7 6Z"/>
+        <circle cx="22" cy="30" r="2"/><path d="M19 35h6M22 24v2"/>
+      </g>
+    </symbol>
+    <symbol id="ico-crown" viewBox="0 0 48 48">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+        <path d="M8 34 6 14l10 9 8-13 8 13 10-9-2 20Z"/>
+        <path d="M8 40h32"/>
+        <circle cx="24" cy="27" r="2.5"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
