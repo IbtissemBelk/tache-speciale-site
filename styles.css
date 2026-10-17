@@ -272,7 +272,7 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-arabic);
   font-size: clamp(2.4rem, 7vw, 4rem);
   line-height: 1.2;
-  color: var(--gold);
+  color: #7E5A1E;
   margin: 0 auto .2em;
   max-width: none;
 }
@@ -347,11 +347,8 @@ main > section:not(.hero) > * {
 
 /* ---------- Déroulé ---------- */
 .journey {
-  background:
-    radial-gradient(ellipse at 50% 0%, rgba(243,196,107,.25), transparent 55%),
-    var(--lattice),
-    var(--walnut);
-  background-size: auto, 80px 80px, auto;
+  background: var(--lattice), var(--walnut);
+  background-size: 80px 80px, auto;
   color: var(--ivory);
 }
 .journey__head { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: end; margin-bottom: 3.5rem; }
@@ -584,11 +581,8 @@ main > section:not(.hero) > * {
 .photo--wide { grid-column: span 2; border-radius: 4px; }
 /* emplacement vide : à remplacer par une vraie photo */
 .photo--empty {
-  background:
-    radial-gradient(circle at 50% 35%, rgba(228,196,126,.22), transparent 60%),
-    var(--tile);
-  background-size: auto, 48px 48px;
-  background-blend-mode: normal, luminosity;
+  background: var(--tile);
+  background-size: 48px 48px;
 }
 .photo--empty::before {
   content: "";

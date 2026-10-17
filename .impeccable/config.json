@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "organic-clip-path",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-10-17T14:33:52.465Z",
+        "reason": "Claude: geometric 8-point Ottoman star badge, not an organic contour"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-17T14:33:59.823Z",
+        "reason": "Claude: ivory taken from the hammam's real ivory walls seen on its Instagram, to match the decor as asked"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-10-17T14:34:00.643Z",
+        "reason": "Claude: literal chandelier/lantern light, domain-appropriate"
+      }
+    ]
+  }
+}
